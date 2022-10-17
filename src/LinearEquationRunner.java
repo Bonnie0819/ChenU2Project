@@ -17,14 +17,14 @@ public class LinearEquationRunner {
         int coord1Length = coord1.length();
 
         int coord1X = Integer.parseInt(coord1.substring(1,comma1));
-        int coord1Y = Integer.parseInt(coord1.substring(comma1 +1, coord1Length -1));
+        int coord1Y = Integer.parseInt(coord1.substring(comma1 + 2, coord1Length -1));
 
         //coordinate 2
         int comma2 = coord2.indexOf(",");
         int coord2Length = coord2.length();
 
         int coord2X = Integer.parseInt(coord2.substring(1,comma2));
-        int coord2Y = Integer.parseInt(coord2.substring(comma2 +1, coord2Length -1));
+        int coord2Y = Integer.parseInt(coord2.substring(comma2 + 2, coord2Length -1));
 
 
 

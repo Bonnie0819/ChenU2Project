@@ -10,8 +10,18 @@ public class LinearEquation {
 
         return slope;
     }
+
+    public double yInt() {
+        return 0;
+    }
+
+    public double distance() {
+        return 0;
+    }
     public String equation() {
 
         return "The equation of the line between these two points is: y = ";
     }
+
+
 }
