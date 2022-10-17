@@ -23,13 +23,11 @@ public class LinearEquationRunner {
         int comma2 = coord2.indexOf(",");
         int coord2Length = coord2.length();
 
-        int coord2X = Integer.parseInt(coord1.substring(1,comma2));
-        int coord2Y = Integer.parseInt(coord1.substring(comma2 +1, coord2Length -1));
+        int coord2X = Integer.parseInt(coord2.substring(1,comma2));
+        int coord2Y = Integer.parseInt(coord2.substring(comma2 +1, coord2Length -1));
 
-        System.out.println(coord1X);
-        System.out.println(coord1Y);
-        System.out.println(coord2X);
-        System.out.println(coord2Y);
+
+
 
 
 
