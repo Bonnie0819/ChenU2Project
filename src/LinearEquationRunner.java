@@ -18,6 +18,7 @@ public class LinearEquationRunner {
         System.out.println(test.coord2X());
         System.out.println(test.coord2Y());
         System.out.println(test.slope());
+        System.out.println(test.distance());
 
 //        //Parsing coordinate values
 //        //coordinate 1

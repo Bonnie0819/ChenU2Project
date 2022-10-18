@@ -43,14 +43,18 @@ public class LinearEquation {
     }
 
     public double yIntercept() {
-        return 0;
+        double yInt = coord1Y() - (slope() * coord1X());
+        return yInt;
     }
 
     public double distance() {
-        return 0;
+        double xValue = Math.pow(coord2X() - coord1X(), 2);
+        double yValue = Math.pow(coord2Y() - coord1Y(), 2);
+        double distance = Math.sqrt(xValue + yValue);
+
+        return Math.round(distance * 100)/100.0;
     }
     public String equation() {
-        String points = "The two points are " + coord1 + " and " + coord2;
         return "The equation of the line between these two points is: y = ";
     }
 
