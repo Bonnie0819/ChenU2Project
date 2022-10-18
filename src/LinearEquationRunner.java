@@ -13,12 +13,11 @@ public class LinearEquationRunner {
 
         //creating LinearEquation Object
         LinearEquation test = new LinearEquation(coord1, coord2);
-        System.out.println(test.coord1X());
-        System.out.println(test.coord1Y());
-        System.out.println(test.coord2X());
-        System.out.println(test.coord2Y());
+
         System.out.println(test.slope());
         System.out.println(test.distance());
+        System.out.println(test.yInt());
+        System.out.println(test.equation());
 
 //        //Parsing coordinate values
 //        //coordinate 1

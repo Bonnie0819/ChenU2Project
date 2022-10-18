@@ -42,9 +42,9 @@ public class LinearEquation {
         return Math.round(slope * 100) /100.0;
     }
 
-    public double yIntercept() {
+    public double yInt() {
         double yInt = coord1Y() - (slope() * coord1X());
-        return yInt;
+        return Math.round(yInt * 100)/100.0;
     }
 
     public double distance() {
@@ -55,7 +55,15 @@ public class LinearEquation {
         return Math.round(distance * 100)/100.0;
     }
     public String equation() {
-        return "The equation of the line between these two points is: y = ";
+        String equation = "The equation of the line between these two points is: y = ";
+
+        if(slope() == 0) { equation += "";}
+        else { equation += slope() + "x";}
+
+        if(yInt() == 0) { equation += "";}
+        else { equation += " + " + yInt();}
+
+        return equation;
     }
 
 
