@@ -14,10 +14,7 @@ public class LinearEquationRunner {
         //creating LinearEquation Object
         LinearEquation test = new LinearEquation(coord1, coord2);
 
-        System.out.println(test.slope());
-        System.out.println(test.distance());
-        System.out.println(test.yInt());
-        System.out.println(test.equation());
+        System.out.println(test.lineInfo());
 
 //        //Parsing coordinate values
 //        //coordinate 1

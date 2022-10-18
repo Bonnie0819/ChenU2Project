@@ -55,7 +55,7 @@ public class LinearEquation {
         return Math.round(distance * 100)/100.0;
     }
     public String equation() {
-        String equation = "The equation of the line between these two points is: y = ";
+        String equation = "";
 
         if(slope() == 0) { equation += "";}
         else { equation += slope() + "x";}
@@ -64,6 +64,16 @@ public class LinearEquation {
         else { equation += " + " + yInt();}
 
         return equation;
+    }
+
+    public String lineInfo() {
+        String line1 = "The two points are " + coord1 + " and " + coord2;
+        String line2 = "The equation of the line between these points is: " + equation();
+        String line3 = "The slope of the line is: " + slope();
+        String line4 = "The Y-intercept of the line is: " + yInt();
+        String line5 = "The distance between the two points is: " + distance();
+
+        return line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n" + line5 + "\n";
     }
 
 
