@@ -1,6 +1,7 @@
 public class LinearEquation {
     private String coord1;
     private String coord2;
+
     public LinearEquation(String coord1, String coord2) {
         this.coord1 = coord1;
         this.coord2 = coord2;
@@ -33,16 +34,15 @@ public class LinearEquation {
         return Integer.parseInt(coord2.substring(comma2 + 2, coord2Length -1));
     }
 
+    public double slope() {
+        int rise = coord2Y() - coord1Y();
+        int run = coord2X() - coord1X();
+        double slope = (double) (rise)/run;
 
-    public double slope(int coord2Y, int coord1Y, int coord2X, int coord1X) {
-        int rise = coord2Y - coord1Y;
-        int run = coord2X - coord1X;
-        double slope = rise/run;
-
-        return slope;
+        return Math.round(slope * 100) /100.0;
     }
 
-    public double yInt() {
+    public double yIntercept() {
         return 0;
     }
 
