@@ -11,20 +11,27 @@ public class LinearEquationRunner {
         System.out.println("Enter Coordinate 2: ");
         String coord2 = scan.nextLine();
 
-        //Parsing coordinate values
-        //coordinate 1
-        int comma1 = coord1.indexOf(",");
-        int coord1Length = coord1.length();
+        //creating LinearEquation Object
+        LinearEquation test = new LinearEquation(coord1, coord2);
+        System.out.println(test.coord1X());
+        System.out.println(test.coord1Y());
+        System.out.println(test.coord2X());
+        System.out.println(test.coord2Y());
 
-        int coord1X = Integer.parseInt(coord1.substring(1,comma1));
-        int coord1Y = Integer.parseInt(coord1.substring(comma1 + 2, coord1Length -1));
-
-        //coordinate 2
-        int comma2 = coord2.indexOf(",");
-        int coord2Length = coord2.length();
-
-        int coord2X = Integer.parseInt(coord2.substring(1,comma2));
-        int coord2Y = Integer.parseInt(coord2.substring(comma2 + 2, coord2Length -1));
+//        //Parsing coordinate values
+//        //coordinate 1
+//        int comma1 = coord1.indexOf(",");
+//        int coord1Length = coord1.length();
+//
+//        int coord1X = Integer.parseInt(coord1.substring(1,comma1));
+//        int coord1Y = Integer.parseInt(coord1.substring(comma1 + 2, coord1Length -1));
+//
+//        //coordinate 2
+//        int comma2 = coord2.indexOf(",");
+//        int coord2Length = coord2.length();
+//
+//        int coord2X = Integer.parseInt(coord2.substring(1,comma2));
+//        int coord2Y = Integer.parseInt(coord2.substring(comma2 + 2, coord2Length -1));
 
 
 
