@@ -7,30 +7,38 @@ public class LinearEquationRunner {
         System.out.println("Welcome!");
 
         System.out.println("Enter Coordinate 1: ");
-        String coord1 = scan.nextLine();
+        String cord1 = scan.nextLine();
         System.out.println("Enter Coordinate 2: ");
-        String coord2 = scan.nextLine();
+        String cord2 = scan.nextLine();
+
+
+        //Parsing coordinate values
+        //coordinate 1
+        int comma1 = cord1.indexOf(",");
+        int cord1Length = cord1.length();
+
+        int x1 = Integer.parseInt(cord1.substring(1,comma1));
+        int y1 = Integer.parseInt(cord1.substring(comma1 + 2, cord1Length -1));
+
+        //coordinate 2
+        int comma2 = cord2.indexOf(",");
+        int cord2Length = cord2.length();
+
+        int x2 = Integer.parseInt(cord2.substring(1,comma2));
+        int y2 = Integer.parseInt(cord2.substring(comma2 + 2, cord2Length -1));
 
         //creating LinearEquation Object
-        LinearEquation test = new LinearEquation(coord1, coord2);
+        LinearEquation test = new LinearEquation(x1, y1, x2, y2);
 
         System.out.println(test.lineInfo());
 
-//        //Parsing coordinate values
-//        //coordinate 1
-//        int comma1 = coord1.indexOf(",");
-//        int coord1Length = coord1.length();
-//
-//        int coord1X = Integer.parseInt(coord1.substring(1,comma1));
-//        int coord1Y = Integer.parseInt(coord1.substring(comma1 + 2, coord1Length -1));
-//
-//        //coordinate 2
-//        int comma2 = coord2.indexOf(",");
-//        int coord2Length = coord2.length();
-//
-//        int coord2X = Integer.parseInt(coord2.substring(1,comma2));
-//        int coord2Y = Integer.parseInt(coord2.substring(comma2 + 2, coord2Length -1));
+        //asking user to pick a x value
+        System.out.println();
+        System.out.println("Enter a value for x: ");
+        double xValue = scan.nextDouble();
+        scan.nextLine();
 
+        System.out.println(test.coordinateForX(xValue));
 
 
 
