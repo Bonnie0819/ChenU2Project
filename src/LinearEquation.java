@@ -59,16 +59,12 @@ public class LinearEquation {
 
         //checks to see if y-intercept is negative or positive and prints out accordingly
         if(yInt() == 0) { equation += "";}
-        else {
-            if (yInt() < 0) {
+        else if (yInt() < 0) {
                 equation += " - " + Math.abs(yInt());
-            } else {
-                if (yInt() > 0 && slope() > 0) {
+            } else if (yInt() > 0 && slope() > 0) {
                     equation += " + " + yInt();
                 } else {
                     equation += yInt();
-                }
-            }
         }
 
         return equation;
