@@ -76,13 +76,16 @@ public class LinearEquation {
 
     //prints out all the info of the equation
     public String lineInfo() {
-        String line1 = "The two points are (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 + ")";
-        String line2 = "The equation of the line between these points is: " + equation();
-        String line3 = "The slope of the line is: " + slope();
-        String line4 = "The Y-intercept of the line is: " + yInt();
-        String line5 = "The distance between the two points is: " + distance();
-
-        return line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n" + line5 + "\n";
+        if(x2 - x1 == 0 && y2 - y1 != 0) {
+            return "These points are on a vertical line: x = " + x1;
+        } else {
+            String line1 = "The two points are (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 + ")";
+            String line2 = "The equation of the line between these points is: " + equation();
+            String line3 = "The slope of the line is: " + slope();
+            String line4 = "The Y-intercept of the line is: " + yInt();
+            String line5 = "The distance between the two points is: " + distance();
+            return line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n" + line5 + "\n";
+        }
     }
 
     //returns the coordinates of the equation for the xValue entered by user

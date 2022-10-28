@@ -32,13 +32,15 @@ public class LinearEquationRunner {
 
         System.out.println(test.lineInfo());
 
-        //asking user to pick a x value
-        System.out.println();
-        System.out.println("Enter a value for x: ");
-        double xValue = scan.nextDouble();
-        scan.nextLine();
+        //asking user to pick an x value if not on vertical line
+        if(x2 - x1 != 0 ) {
+            System.out.println();
+            System.out.println("Enter a value for x: ");
+            double xValue = scan.nextDouble();
+            scan.nextLine();
 
-        System.out.println(test.coordinateForX(xValue));
+            System.out.println(test.coordinateForX(xValue));
+        }
 
 
 
