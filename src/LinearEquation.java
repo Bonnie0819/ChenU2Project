@@ -51,9 +51,9 @@ public class LinearEquation {
             equation += "-x";
         } else if (slope() == (int) slope()) {
             equation += (int) slope() + "x";
-        } else if (slope() > 1) {
+        } else if (slope() > 0) {
             equation += Math.abs(y2 - y1) + "/" + Math.abs(x2 - x1) + "x";
-        } else if (slope() < -1) {
+        } else if (slope() < 0) {
             equation += "-" + Math.abs(y2 - y1) + "/" + Math.abs(x2 - x1) + "x";
         }
 
