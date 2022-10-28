@@ -18,7 +18,7 @@ public class LinearEquation {
     public double slope() {
         int rise = y2 - y1;
         int run = x2 - x1;
-        double slope = (double) (rise)/run;
+        double slope = (double) (rise) / run;
 
         return roundedToHundredth(slope);
     }
@@ -43,27 +43,18 @@ public class LinearEquation {
         String equation = "y = ";
 
         //makes sure the slope is printed out correctly in the equation
-        if(slope() == 0) { equation += "";}
-        else {
-            if (slope() == 1) {
-                equation += "x";
-            } else {
-                if (slope() == -1) {
-                    equation += "-x";
-                } else {
-                    if (slope() == (int) slope()) {
-                        equation += (int) slope() + "x";
-                    } else {
-                        if (slope() > 1) {
-                            equation += Math.abs(y2 - y1) + "/" + Math.abs(x2 - x1) + "x";
-                        } else {
-                            if (slope() < -1) {
-                                equation += "-" + Math.abs(y2 - y1) + "/" + Math.abs(x2 - x1) + "x";
-                            }
-                        }
-                    }
-                }
-            }
+        if (slope() == 0) {
+            equation += "";
+        } else if (slope() == 1) {
+            equation += "x";
+        } else if (slope() == -1) {
+            equation += "-x";
+        } else if (slope() == (int) slope()) {
+            equation += (int) slope() + "x";
+        } else if (slope() > 1) {
+            equation += Math.abs(y2 - y1) + "/" + Math.abs(x2 - x1) + "x";
+        } else if (slope() < -1) {
+            equation += "-" + Math.abs(y2 - y1) + "/" + Math.abs(x2 - x1) + "x";
         }
 
         //checks to see if y-intercept is negative or positive and prints out accordingly
@@ -72,7 +63,7 @@ public class LinearEquation {
             if (yInt() < 0) {
                 equation += " - " + Math.abs(yInt());
             } else {
-                if (yInt() == 0 && slope() > 0) {
+                if (yInt() > 0 && slope() > 0) {
                     equation += " + " + yInt();
                 } else {
                     equation += yInt();
