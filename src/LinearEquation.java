@@ -42,7 +42,7 @@ public class LinearEquation {
     public String equation() {
         String equation = "y = ";
 
-        //makes sure the slope is printed out correctly in the equation
+        //use of if and else if statements to make sure the correct slope is printed out
         if (slope() == 0) {
             equation += "";
         } else if (slope() == 1) {
@@ -60,7 +60,7 @@ public class LinearEquation {
         //checks to see if y-intercept is negative or positive and prints out accordingly
         if(yInt() == 0) { equation += "";}
         else if (yInt() < 0) {
-                equation += " - " + Math.abs(yInt());
+                equation += " -" + Math.abs(yInt());
             } else if (yInt() > 0 && slope() != 0) {
                     equation += " + " + yInt();
                 } else {
@@ -72,22 +72,18 @@ public class LinearEquation {
 
     //prints out all the info of the equation
     public String lineInfo() {
-        if(x2 - x1 == 0 && y2 - y1 != 0) {
-            return "These points are on a vertical line: x = " + x1;
-        } else {
             String line1 = "The two points are (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 + ")";
             String line2 = "The equation of the line between these points is: " + equation();
             String line3 = "The slope of the line is: " + slope();
             String line4 = "The Y-intercept of the line is: " + yInt();
             String line5 = "The distance between the two points is: " + distance();
             return line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n" + line5 + "\n";
-        }
     }
 
     //returns the coordinates of the equation for the xValue entered by user
     public String coordinateForX(double xValue) {
         double yVal = slope() * xValue + yInt();
-        return "(" + xValue + ", " + yVal + ")";
+        return "(" + roundedToHundredth(xValue) + ", " + roundedToHundredth(yVal) + ")";
     }
 
     //returns the value toRound rounded to the nearest hundredths

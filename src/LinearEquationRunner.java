@@ -28,18 +28,20 @@ public class LinearEquationRunner {
         int y2 = Integer.parseInt(cord2.substring(comma2 + 2, cord2Length -1));
 
         //creating LinearEquation Object
-        LinearEquation test = new LinearEquation(x1, y1, x2, y2);
+        if(!(x2==x1)) {
+            LinearEquation test = new LinearEquation(x1, y1, x2, y2);
 
-        System.out.println(test.lineInfo());
+            System.out.println(test.lineInfo());
 
-        //asking user to pick an x value if not on vertical line
-        if(x2 - x1 != 0 ) {
-            System.out.println();
-            System.out.println("Enter a value for x: ");
-            double xValue = scan.nextDouble();
-            scan.nextLine();
+            //asking user to pick an x value if not on vertical line
+                System.out.println();
+                System.out.println("Enter a value for x: ");
+                double xValue = scan.nextDouble();
+                scan.nextLine();
 
-            System.out.println(test.coordinateForX(xValue));
+                System.out.println(test.coordinateForX(xValue));
+        } else {
+            System.out.println("These points are on a vertical line: x = " + x1);
         }
 
 
