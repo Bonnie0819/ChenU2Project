@@ -34,12 +34,12 @@ public class LinearEquationRunner {
             System.out.println(test.lineInfo());
 
             //asking user to pick an x value if not on vertical line
-                System.out.println();
-                System.out.println("Enter a value for x: ");
-                double xValue = scan.nextDouble();
-                scan.nextLine();
+            System.out.println();
+            System.out.println("Enter a value for x: ");
+            double xValue = scan.nextDouble();
+            scan.nextLine();
 
-                System.out.println(test.coordinateForX(xValue));
+            System.out.println(test.coordinateForX(xValue));
         } else {
             System.out.println("These points are on a vertical line: x = " + x1);
         }
